@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(ken.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 0 8%;
+    position: relative;
+}
+
+.logo {
+    width: 120px;
+    padding: 20px 0;
+    cursor: pointer;
+    color: palevioletred;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.content {
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    color: #fff;
+    text-align: center; /* Center the content */
+    width: 100%;
+}
+
+.content h1 {
+    font-size: 64px;
+    font-weight: 600;
+}
+
+.content h1 span {
+    color: #ff3753;
+}
+.btn{
+    padding: 15px 40px;
+    border: none;
+    border-radius: 70px;
+   
+}
+
+.content button {
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    padding: 12px 25px;
+    color: #fff;
+    border-radius: 4%;
+    cursor: pointer;
+    margin-top: auto;
+    margin: 50px;
+    padding: 15px 40px;
+     z-index: 0;
+     border-radius: 12px;
+}
+.content button::after{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+.launch-time {
+    display: flex;
+    justify-content: center; /* Center the countdown elements */
+    gap: 20px; /* Add space between the countdown elements */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.launch-time div {
+    flex-basis: 100px;
+    text-align: center;
+}
+
+.launch-time div p {
+    font-size: 60px;
+    margin-bottom: -14px;
+    align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 48px;
+    }
+
+    .launch-time div p {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 36px;
+    }
+
+    .launch-time div p {
+        font-size: 30px;
+    }
+}
+
+.rocket {
+    width: 100px;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    opacity: 1;
+    animation: rocket 4s linear infinite;
+}
+
+@keyframes rocket {
+    0% {
+        bottom: 0;
+        opacity: 1;
+    }
+    100% {
+        bottom: 105%;
+        opacity: 0;
+    }
+}
